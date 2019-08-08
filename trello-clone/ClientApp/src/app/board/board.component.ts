@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Column } from '../column/Column';
 
 @Component({
   selector: 'app-board',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
-  cards = 'cards';
+  columns: Column[] = [
+    { title: 'Extra column 1' },
+    { title: 'Extra column 2' }
+  ];
 
   constructor() { }
 
