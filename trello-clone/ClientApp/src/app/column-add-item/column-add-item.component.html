@@ -1,4 +1,19 @@
-<div class="add-item">
-  <i class="material-icons">add</i>
-  <p>Add an item</p>
+<div *ngIf="isAddingItem; else addItem" class="new-item">
+  <textarea
+    #textarea
+    [(ngModel)]="newItemValue"
+    (keydown.Enter)="onEnterKeyDown($event)"
+    placeholder="Enter a title...">
+  </textarea>
+  <div class="buttons">
+    <app-button type="success" (click)="createNewItem()">Add Item</app-button>
+    <i class="material-icons close" (click)="toggleIsAddingItem()">close</i>
+  </div>
 </div>
+
+<ng-template #addItem>
+  <div class="add-item" (click)="onAddItemClick()">
+    <i class="material-icons">add</i>
+    <p>Add an item</p>
+  </div>
+</ng-template>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Column } from './Column';
+import { Column } from '../Models/Column';
+import { Task } from '../Models/Task';
 
 @Component({
   selector: 'app-column',
@@ -13,5 +14,9 @@ export class ColumnComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }
+
+  createNewItem = (item: { title: string }) => {
+    this.column.tasks.push(new Task(item.title));
+  }
 
 }

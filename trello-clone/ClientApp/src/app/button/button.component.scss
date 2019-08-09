@@ -1,0 +1,20 @@
+button {
+	cursor: pointer;
+	border-radius: 3px;
+	border: none;
+	padding: 5px 15px;
+	box-shadow: 0 0 2px black;
+
+	&:focus, &:active {
+		outline: none;
+	}
+
+	&:active {
+		box-shadow: none;
+	}
+
+	&.success {
+		color: white;
+		background-color: #2b9a2b;
+	}
+}

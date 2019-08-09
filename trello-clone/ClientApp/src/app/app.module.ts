@@ -11,6 +11,7 @@ import { TextInputComponent } from './text-input/text-input.component';
 import { ColumnTitleComponent } from './column-title/column-title.component';
 import { ColumnItemComponent } from './column-item/column-item.component';
 import { ColumnAddItemComponent } from './column-add-item/column-add-item.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ColumnAddItemComponent } from './column-add-item/column-add-item.compon
     TextInputComponent,
     ColumnTitleComponent,
     ColumnItemComponent,
-    ColumnAddItemComponent
+    ColumnAddItemComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

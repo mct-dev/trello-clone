@@ -1,11 +1,16 @@
 <div class="column">
+
   <div class="title-container">
     <app-column-title [column]="column"></app-column-title>
   </div>
+
   <div class="delete-btn" (click)="deleteColumn(this.column.id)">
     <i class="material-icons">close</i>
   </div>
-  <div class="add-item">
-    <app-column-add-item></app-column-add-item>
+
+  <app-column-item *ngFor="let task of this.column.tasks" [item]="task"></app-column-item>
+
+  <div class="add-item" >
+    <app-column-add-item [createItem]="createNewItem"></app-column-add-item>
   </div>
 </div>

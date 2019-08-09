@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Task } from '../Models/Task';
 
 @Component({
   selector: 'app-column-item',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./column-item.component.scss']
 })
 export class ColumnItemComponent implements OnInit {
+  @Input() item: Task;
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Column } from '../column/Column';
+import { Column } from '../Models/Column';
 
 @Component({
   selector: 'app-column-title',

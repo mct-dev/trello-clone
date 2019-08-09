@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Column } from '../column/Column';
+import { Column } from '../Models/Column';
 
 @Component({
   selector: 'app-board',
@@ -9,7 +9,7 @@ import { Column } from '../column/Column';
 export class BoardComponent implements OnInit {
 
   columns: Column[] = [
-    { id: '1', title: 'First Column' },
+    new Column('First Column'),
   ];
 
   constructor() { }

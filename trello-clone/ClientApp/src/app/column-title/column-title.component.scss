@@ -9,6 +9,7 @@ input {
 	width: calc(100% - 20px);
 
 	&:focus {
+		background-color: #fff;
 		border-radius: 0;
 		cursor: auto;
 	}
