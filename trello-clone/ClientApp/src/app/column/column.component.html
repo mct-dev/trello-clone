@@ -2,5 +2,10 @@
   <div class="title-container">
     <app-column-title [column]="column"></app-column-title>
   </div>
-  <div class="delete-btn" (click)="deleteColumn(this.column.id)">&#x274C;</div>
+  <div class="delete-btn" (click)="deleteColumn(this.column.id)">
+    <i class="material-icons">close</i>
+  </div>
+  <div class="add-item">
+    <app-column-add-item></app-column-add-item>
+  </div>
 </div>

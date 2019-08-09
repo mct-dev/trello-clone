@@ -1,0 +1,25 @@
+.add-item {
+	align-items: center;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	bottom: 0;
+	display: flex;
+	left: 0;
+	position: absolute;
+	width: calc(100% - 4px);
+	cursor: pointer;
+	padding: 2px;
+
+	&:hover {
+		background-color: #ccc;
+	}
+
+	i {
+		color: #655e5e;
+	}
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
+}

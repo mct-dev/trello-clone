@@ -17,5 +17,13 @@
 		position: absolute;
 		right: 7px;
 		top: 6px;
+		i {
+			color: red;
+			text-shadow: 0 0 2px #484848;
+		}
+	}
+
+	.add-item {
+		margin-top: 20px;
 	}
 }
