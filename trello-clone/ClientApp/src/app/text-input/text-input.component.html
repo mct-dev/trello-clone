@@ -1,1 +1,6 @@
-<input [(ngModel)]="value" [placeholder]="placeholder"/>
+<input
+	[(ngModel)]="value"
+	[placeholder]="placeholder"
+	(change)="onChange($event)"
+	(keydown.enter)="onEnterKey($event)"
+/>

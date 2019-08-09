@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-create-column',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateColumnComponent implements OnInit {
 
+  @Input() createNewColumn: (title: string) => any;
+  inputValue = '';
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  onEnterKey = (e: KeyboardEvent) => {
+    this.inputValue = (e.target as HTMLInputElement).value;
+    this.createNewColumn(this.inputValue);
   }
 
 }

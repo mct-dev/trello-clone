@@ -9,13 +9,17 @@ import { Column } from '../column/Column';
 export class BoardComponent implements OnInit {
 
   columns: Column[] = [
-    { title: 'Extra column 1' },
-    { title: 'Extra column 2' }
+    { title: 'First Column' },
   ];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  createColumn = (title: string) => {
+    console.log(title);
+    this.columns.push({ title });
   }
 
 }
