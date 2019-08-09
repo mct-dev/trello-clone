@@ -17,6 +17,8 @@ export class CreateColumnComponent implements OnInit {
   onEnterKey = (e: KeyboardEvent) => {
     this.inputValue = (e.target as HTMLInputElement).value;
     this.createNewColumn(this.inputValue);
+    (e.target as HTMLInputElement).value = '';
+    this.inputValue = '';
   }
 
 }

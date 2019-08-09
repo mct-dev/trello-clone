@@ -8,10 +8,10 @@ import { Column } from './Column';
 })
 export class ColumnComponent implements OnInit {
   @Input() column: Column;
+  @Input() deleteColumn: (id: string) => any;
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

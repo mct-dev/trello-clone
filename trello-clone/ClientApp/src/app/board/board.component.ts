@@ -9,7 +9,7 @@ import { Column } from '../column/Column';
 export class BoardComponent implements OnInit {
 
   columns: Column[] = [
-    { title: 'First Column' },
+    { id: '1', title: 'First Column' },
   ];
 
   constructor() { }
@@ -17,9 +17,8 @@ export class BoardComponent implements OnInit {
   ngOnInit() {
   }
 
-  createColumn = (title: string) => {
-    console.log(title);
-    this.columns.push({ title });
-  }
+  deleteColumn = (id: string) => this.columns = this.columns.filter(c => c.id !== id);
+
+  createColumn = (title: string) => this.columns.push({ id: (Math.random() * 10000).toString(), title });
 
 }

@@ -1,5 +1,5 @@
 <h2>Board!</h2>
 <div class="board">
-  <app-column *ngFor="let column of columns" [column]="column"></app-column>
-  <app-create-column [createNewColumn]="createColumn"></app-create-column>
+  <app-column *ngFor="let column of columns" [column]="column" [deleteColumn]="deleteColumn"></app-column>
+  <app-create-column [createNewColumn]="createColumn" ></app-create-column>
 </div>
