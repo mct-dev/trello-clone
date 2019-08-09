@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Column } from '../Models/Column';
+import { Task } from '../Models/Task';
 
 @Component({
   selector: 'app-board',
@@ -9,7 +10,7 @@ import { Column } from '../Models/Column';
 export class BoardComponent implements OnInit {
 
   columns: Column[] = [
-    new Column('First Column'),
+    new Column('First Column', [new Task('Task 1!')]),
   ];
 
   constructor() { }

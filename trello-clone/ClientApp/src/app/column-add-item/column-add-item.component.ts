@@ -7,7 +7,7 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 })
 export class ColumnAddItemComponent implements OnInit {
   @Input() createItem: (item: { title: string }) => any;
-  isAddingItem = true;
+  isAddingItem = false;
   newItemValue = '';
 
   constructor() { }
