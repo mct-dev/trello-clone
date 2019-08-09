@@ -1,6 +1,21 @@
 .column {
-	width: 250px;
+	border-radius: 5px;
+	background-color: #dadada;
+	border: 1px solid rgba(122, 122, 122, 0.404);
 	height: 100%;
-	border: 1px solid black;
-	padding: 20px;
+	margin: 0 10px;
+	padding: 5px;
+	position: relative;
+	width: 250px;
+
+	.title-container {
+		width: 85%;
+	}
+
+	.delete-btn {
+		cursor: pointer;
+		position: absolute;
+		right: 7px;
+		top: 6px;
+	}
 }

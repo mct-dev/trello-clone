@@ -1,9 +1,6 @@
 <div class="column">
-  <div class="title">
-    <app-text-input
-      [(value)]="column.title"
-      placeholder="Title...">
-    </app-text-input>
+  <div class="title-container">
+    <app-column-title [column]="column"></app-column-title>
   </div>
-  <div class="delete-column" (click)="deleteColumn(this.column.id)">X</div>
+  <div class="delete-btn" (click)="deleteColumn(this.column.id)">&#x274C;</div>
 </div>

@@ -9,6 +9,7 @@ import { BoardComponent } from './board/board.component';
 import { ColumnComponent } from './column/column.component';
 import { CreateColumnComponent } from './create-column/create-column.component';
 import { TextInputComponent } from './text-input/text-input.component';
+import { ColumnTitleComponent } from './column-title/column-title.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TextInputComponent } from './text-input/text-input.component';
     BoardComponent,
     ColumnComponent,
     CreateColumnComponent,
-    TextInputComponent
+    TextInputComponent,
+    ColumnTitleComponent
   ],
   imports: [
     BrowserModule,

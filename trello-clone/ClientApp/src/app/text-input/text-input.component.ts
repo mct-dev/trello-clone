@@ -10,6 +10,7 @@ export class TextInputComponent implements OnInit {
   @Input() onEnterKey: (e: KeyboardEvent) => any;
   @Input() placeholder: string;
   @Input() value: string;
+  @Input() fontSize?: FontSize;
   @Output() valueChange = new EventEmitter<string>();
 
   constructor() { }
@@ -18,4 +19,9 @@ export class TextInputComponent implements OnInit {
 
   onChange = (e) => this.valueChange.emit(e.target.value);
 
+}
+
+export enum FontSize {
+  Small,
+  Large
 }
