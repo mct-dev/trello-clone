@@ -10,10 +10,13 @@ import { Task } from '../Models/Task';
 export class ColumnComponent implements OnInit {
   @Input() column: Column;
   @Input() deleteColumn: (id: string) => any;
+  isAddingItem = false;
 
   constructor() { }
 
   ngOnInit() { }
+
+  onIsAddingUpdate = (isAdding: boolean) => this.isAddingItem = isAdding;
 
   createNewItem = (item: { title: string }) => {
     this.column.tasks.push(new Task(item.title));

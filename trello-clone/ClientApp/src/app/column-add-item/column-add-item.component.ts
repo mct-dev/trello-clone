@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewChild, QueryList } from '@angular/core';
 
 @Component({
   selector: 'app-column-add-item',
@@ -7,6 +7,7 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 })
 export class ColumnAddItemComponent implements OnInit {
   @Input() createItem: (item: { title: string }) => any;
+  @Output() isOpen = new EventEmitter<boolean>();
   isAddingItem = false;
   newItemValue = '';
 
@@ -28,10 +29,14 @@ export class ColumnAddItemComponent implements OnInit {
     this.createNewItem();
   }
 
-  toggleIsAddingItem = () => this.isAddingItem = !this.isAddingItem;
+  toggleIsAddingItem = () => {
+    const isAdding = !this.isAddingItem;
+    this.isOpen.emit(isAdding);
+    this.isAddingItem = isAdding;
+  }
 
   onAddItemClick = () => {
-    this.isAddingItem = true;
+    this.toggleIsAddingItem();
     this.newItemValue = '';
     // TODO: focus textarea right here
   }

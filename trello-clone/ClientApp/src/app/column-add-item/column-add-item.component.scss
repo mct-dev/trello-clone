@@ -27,12 +27,14 @@
 $textAreaWidth: calc(100% - 10px);
 .new-item {
 	textarea {
-		width: $textAreaWidth;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		font-size: .8rem;
+		height: 45px;
 		max-width: $textAreaWidth;
 		min-width: $textAreaWidth;
 		padding: 5px;
-		border-radius: 5px;
-		border: 1px solid #ccc;
+		width: $textAreaWidth;
 	}
 
 	i { cursor: pointer; }
