@@ -10,7 +10,7 @@ import { Task } from '../Models/Task';
 export class BoardComponent implements OnInit {
 
   columns: Column[] = [
-    new Column('First Column', [new Task('Task 1!')]),
+    new Column('First Column', [new Task('Task 1!'), new Task('Task 2!'), new Task('Task 3!')]),
   ];
 
   constructor() { }

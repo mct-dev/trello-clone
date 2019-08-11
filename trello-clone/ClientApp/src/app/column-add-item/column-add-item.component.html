@@ -1,8 +1,8 @@
 <div *ngIf="isAddingItem; else addItem" class="new-item">
   <textarea
-    #textarea
+    autofocus
     [(ngModel)]="newItemValue"
-    (keydown.Enter)="onEnterKeyDown($event)"
+    (keydown)="onKeyDown($event)"
     placeholder="Enter a title...">
   </textarea>
   <div class="buttons">

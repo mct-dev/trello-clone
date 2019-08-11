@@ -24,9 +24,24 @@ export class ColumnAddItemComponent implements OnInit {
     this.createItem({ title: this.newItemValue });
   }
 
-  onEnterKeyDown = (e: KeyboardEvent) => {
-    e.preventDefault();
+  handleEnterKey = () => {
     this.createNewItem();
+    this.toggleIsAddingItem();
+    this.newItemValue = '';
+  }
+
+  onKeyDown = (e: KeyboardEvent) => {
+    switch (e.key) {
+      case 'Enter':
+        e.preventDefault();
+        this.handleEnterKey();
+        break;
+      case 'Escape':
+        this.toggleIsAddingItem();
+        break;
+      default:
+        break;
+    }
   }
 
   toggleIsAddingItem = () => {
