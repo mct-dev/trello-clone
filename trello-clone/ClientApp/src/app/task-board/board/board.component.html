@@ -1,4 +1,8 @@
 <div class="board">
-  <app-column *ngFor="let column of columns" [column]="column" [deleteColumn]="deleteColumn"></app-column>
+  <app-column *ngFor="let column of columns" [column]="column" [deleteColumn]="deleteColumn">
+    <div class="item-list" cdkDropList (cdkDropListDropped)="onDrop($event)">
+      <app-column-item class="item" *ngFor="let task of this.column.tasks" [item]="task" cdkDrag></app-column-item>
+    </div>
+  </app-column>
   <app-create-column [createNewColumn]="createColumn" ></app-create-column>
 </div>

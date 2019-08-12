@@ -8,9 +8,7 @@
     <i class="material-icons">close</i>
   </div>
 
-  <div class="item-list" cdkDropList (cdkDropListDropped)="onDrop($event)">
-    <app-column-item class="item" *ngFor="let task of this.column.tasks" [item]="task" cdkDrag></app-column-item>
-  </div>
+  <ng-content></ng-content>
 
   <div class="add-item" [class.open]="isAddingItem" >
     <app-column-add-item

@@ -1,4 +1,11 @@
 .board {
 	display: flex;
 	flex-direction: row;
+
+	.item-list {
+		.item {
+			display: block;
+		}
+	}
+
 }
