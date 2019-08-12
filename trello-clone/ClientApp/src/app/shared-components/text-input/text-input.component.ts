@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-text-input',
+  selector: 'app-shared-textinput',
   templateUrl: './text-input.component.html',
   styleUrls: ['./text-input.component.scss']
 })

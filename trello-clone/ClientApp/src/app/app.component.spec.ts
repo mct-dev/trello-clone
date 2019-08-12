@@ -1,6 +1,14 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { BoardComponent } from './task-board/board/board.component';
+import { ColumnComponent } from './task-board/column/column.component';
+import { CreateColumnComponent } from './task-board/create-column/create-column.component';
+import { TextInputComponent } from './shared-components/text-input/text-input.component';
+import { ColumnTitleComponent } from './task-board/column-title/column-title.component';
+import { ColumnItemComponent } from './task-board/column-item/column-item.component';
+import { ColumnAddItemComponent } from './task-board/column-add-item/column-add-item.component';
+import { ButtonComponent } from './shared-components/button/button.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,7 +17,15 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        BoardComponent,
+        ColumnComponent,
+        CreateColumnComponent,
+        TextInputComponent,
+        ColumnTitleComponent,
+        ColumnItemComponent,
+        ColumnAddItemComponent,
+        ButtonComponent
       ],
     }).compileComponents();
   }));

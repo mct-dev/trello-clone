@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Task } from '../Models/Task';
+import { Task } from '../Task';
 
 @Component({
   selector: 'app-column-item',
@@ -11,7 +11,6 @@ export class ColumnItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

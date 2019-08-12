@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Column } from '../Models/Column';
-import { Task } from '../Models/Task';
+import { Column } from '../Column';
+import { Task } from '../Task';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
-import { currentId } from 'async_hooks';
 
 @Component({
   selector: 'app-column',

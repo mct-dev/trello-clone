@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Column } from '../Models/Column';
+import { Column } from '../Column';
 
 @Component({
   selector: 'app-column-title',
@@ -11,7 +11,6 @@ export class ColumnTitleComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

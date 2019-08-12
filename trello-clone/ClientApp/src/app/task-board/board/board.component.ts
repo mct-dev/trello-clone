@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Column } from '../Models/Column';
-import { Task } from '../Models/Task';
+import { Column } from '../Column';
+import { Task } from '../Task';
 
 @Component({
   selector: 'app-board',
@@ -15,8 +15,7 @@ export class BoardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   deleteColumn = (id: string) => this.columns = this.columns.filter(c => c.id !== id);
 

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BoardComponent } from './board.component';
+import { Column } from '../Column';
 
 describe('BoardComponent', () => {
   let component: BoardComponent;
@@ -21,5 +22,16 @@ describe('BoardComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should create a new column when createColumn is called', () => {
+    const columns: Column[] = [
+      new Column('Column 1', [])
+    ];
+    component = new BoardComponent();
+    component.columns = columns;
+
+    component.createColumn('New Column');
+    expect(component.columns.length).toBe(2, 'column was created');
   });
 });
