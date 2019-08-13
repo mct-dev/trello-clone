@@ -31,10 +31,27 @@ export class BoardComponent implements OnInit {
 
   createColumn = (title: string) => this.columns.push(new Column(title, []));
 
+  moveItemInArray(arr: any[], prevIndex: number, newIndex: number): any[] {
+    const prevItem = arr.splice(prevIndex, 1);
+    return arr.splice(newIndex, 0, arr.splice(prevIndex, 1))
+  }
+
+  transferBetweenArrays(prevArray: any[], newArray: any[], prevIndex: number, newIndex: number): void {
+    newArray.splice(newIndex, 0, prevArray.splice(prevIndex, 1));
+  }
+
   onDrop = (e: CdkDragDrop<any, any>) => {
-    // const itemToMove = this.column.tasks.splice(e.previousIndex, 1)[0];
-    // this.column.tasks.splice(e.currentIndex, 0, itemToMove);
-    console.log(e);
+    console.log(e)
+    const prevColumn = e.previousContainer.element.nativeElement;
+    const newColumn = e.container.element.nativeElement;
+    if (prevColumn === newColumn) {
+      const colData = this.columns.find((c: Column) => c.id === prevColumn.id)
+      this.moveItemInArray(colData.tasks, e.previousIndex, e.currentIndex);
+    } else {
+      const prevColumnData = this.columns.find((c: Column) => c.id === prevColumn.id);
+      const newColumnData = this.columns.find((c: Column) => c.id === newColumn.id);
+      this.transferBetweenArrays(prevColumnData.tasks, newColumnData.tasks, e.previousIndex, e.currentIndex);
+    }
   }
 
 
